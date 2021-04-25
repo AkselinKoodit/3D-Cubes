@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.area {
+  margin: 100px;
+  position: relative;
+  perspective: 2000px;
+  perspective-origin: 250% -500px;
+}
+.rotateY .cube {
+  animation: rotateY 5s infinite;
+}
+.rotateX .cube {
+  animation: rotateX 5s infinite linear;
+}
+.cube {
+  text-align: center;
+  height: 150px;
+  width: 150px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.left {
+  position: absolute;
+  opacity: 0.9;
+  background-color: chartreuse;
+  height: 100%;
+  width: 100%;
+  transform: rotateY(-110deg) translateZ(75px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right {
+  position: absolute;
+  opacity: 0.9;
+  background-color: rgb(207, 240, 62);
+  height: 100%;
+  width: 100%;
+  transform: rotateY(70deg) translateZ(75px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.front {
+  position: absolute;
+  opacity: 0.9;
+  transform: rotateY(-20deg) translateZ(75px);
+  background-color: lightskyblue;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.back {
+  position: absolute;
+  opacity: 0.9;
+  background-color: lightgoldenrodyellow;
+  height: 100%;
+  width: 100%;
+  transform: rotateY(160deg) translateZ(75px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top {
+  position: absolute;
+  opacity: 0.9;
+  background-color: lightcoral;
+  height: 100%;
+  width: 100%;
+  transform: rotateX(90deg) rotateZ(20deg) translateZ(75px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bottom {
+  position: absolute;
+  opacity: 0.9;
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  transform: rotateX(-90deg) rotateZ(-20deg) translateZ(75px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@keyframes rotateY {
+  0% {
+    transform: rotateY(0deg);
+  }
+  25% {
+    transform: rotateY(-90deg);
+  }
+  50% {
+    transform: rotateY(-180deg);
+  }
+  75% {
+    transform: rotateY(-270deg);
+  }
+}
+@keyframes rotateX {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
