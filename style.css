@@ -23,6 +23,9 @@ body {
 .rotateX .cube {
   animation: rotateX 5s infinite linear;
 }
+.rotateZ .cube {
+  animation: rotateZ 5s infinite linear;
+}
 .cube {
   text-align: center;
   height: 150px;
@@ -112,9 +115,17 @@ body {
 }
 @keyframes rotateX {
   from {
-    transform: rotate(0deg);
+    transform: rotateX(0deg);
   }
   to {
-    transform: rotate(359deg);
+    transform: rotateX(359deg);
+  }
+}
+@keyframes rotateZ {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(359deg);
   }
 }
